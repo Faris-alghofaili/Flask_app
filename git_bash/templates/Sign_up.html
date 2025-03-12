@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/testSign.css') }}">
+    <script>
+        var signUpUrl = "{{ url_for('sign_up') }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <div class="title-container">
+        <img src="{{ url_for('static', filename='images/logoo.png') }}" alt="المرتل الذكي" class="title-img">
+    </div>
+
+    <div class="container">
+        <div class="project-content">
+            <h2>Welcome to Our Project!</h2>
+            <p>Join us and be a part of an amazing journey. Our project focuses on generating an Ultra-Realistic
+                Voice Generation and Text Annotation System for Quranic Translations. You can use it to hear the translation 
+                of the Quran with added emotions using predefined tags.</p>
+        </div>
+
+        <div class="signup-form">
+            <h2>Sign Up</h2>
+            <p id="error-message" style="color: red;">{{ error_message }}</p>
+
+            <form id="signup-form" method="POST" action="{{ url_for('sign_up') }}">
+                <input type="text" id="name" name="name" placeholder="name">
+                <input type="text" id="username" name="username" placeholder="Username">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <input type="password" id="confirm-password" name="confirm password" placeholder="Password again">
+
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <p class="login-link">Already have an account? <a href="{{ url_for('sign_in') }}">Log in</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
