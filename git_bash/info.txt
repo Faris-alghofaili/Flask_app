@@ -1,0 +1,11 @@
+to run new db file data_base_V4.sql 
+
+run 
+query DROP DATABASE IF EXISTS `mydb`;
+
+then run data_base_V4.sql file in query tab 
+
+run requirments.txt using pip install -r requirements.txt 
+added new libraries
+
+sign_in and sign_up work 
